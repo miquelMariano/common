@@ -14,7 +14,7 @@ galaxy_info:
   # - Apache
   # - CC-BY
   license: license (GPLv2, CC-BY, etc)
-  min_ansible_version: 1.2
+  min_ansible_version: 2.2
   #
   # Below are all platforms currently available. Just uncomment
   # the ones that apply to your role. If you don't see your 
@@ -22,6 +22,7 @@ galaxy_info:
   #
   galaxy_tags:
     - common
+    - miquelMariano
   platforms:
   #- name: EL
   #  versions:
@@ -130,10 +131,13 @@ galaxy_info:
   #  - 11SP1
   #  - 11SP2
   #  - 11SP3
-  - name: GenericLinux
+  - name: CenOS
     versions:
+    - 7
+  #- name: GenericLinux
+  #  versions:
   #  - all
-    - any
+  # - any
   #- name: NXOS
   #  versions:
   #  - all
