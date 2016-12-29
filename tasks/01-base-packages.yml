@@ -1,0 +1,27 @@
+---
+
+- name: Intall last version of EPEL repo
+  yum:
+    name: epel-release
+    state: latest
+
+- name: Install last version of VIM
+  yum:
+    name: vim
+    state: latest
+
+- name: Install last version of HTOP
+  yum:
+    name: htop
+    state: latest
+
+- name: Install last version of libselinux-python
+  yum:
+    name: libselinux-python
+    state: latest
+
+- name: Ensure Ansible packages are installed
+  yum: 
+    name: ansible
+    state: present
+
