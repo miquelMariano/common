@@ -131,7 +131,7 @@ galaxy_info:
   #  - 11SP1
   #  - 11SP2
   #  - 11SP3
-  - name: CenOS
+  - name: CentOS
     versions:
     - 7
   #- name: GenericLinux
