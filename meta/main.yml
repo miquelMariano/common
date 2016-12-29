@@ -22,6 +22,7 @@ galaxy_info:
   #
   galaxy_tags:
     - common
+    - miquelMariano
   platforms:
   #- name: EL
   #  versions:
