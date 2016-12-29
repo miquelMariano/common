@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: '@miquelMariano'
-  description: 
+  description: Common configuration
   company: 'Ncora Information Technology S.L.'
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -20,7 +20,7 @@ galaxy_info:
   # the ones that apply to your role. If you don't see your 
   # platform on this list, let us know and we'll get it added!
   #
-  #platforms:
+  platforms:
   #- name: EL
   #  versions:
   #  - all
@@ -128,10 +128,10 @@ galaxy_info:
   #  - 11SP1
   #  - 11SP2
   #  - 11SP3
-  #- name: GenericLinux
-  #  versions:
+  - name: GenericLinux
+    versions:
   #  - all
-  #  - any
+    - any
   #- name: NXOS
   #  versions:
   #  - all
