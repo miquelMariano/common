@@ -2,7 +2,7 @@
 
 - name: Ensure basic packages are installed
   yum:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present #latest
     with_items:
       - epel-release
