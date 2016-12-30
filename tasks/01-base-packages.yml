@@ -5,11 +5,13 @@
     name: "{{ item }}"
     state: present #latest
   with_items:
-      - "epel-release"
-      - "vim"
-      - "htop"
-      - "libselinux-python"
-      - "ansible"
+      - epel-release
+      - vim
+      - htop
+      - iotop
+      - net-tools
+      - libselinux-python
+      - ansible
   when: ansible_os_family == 'RedHat'
 
 #- name: Intall last version of EPEL repo
