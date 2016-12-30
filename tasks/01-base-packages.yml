@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure basic packages are installed
+- name: Ensure common sowtware are installed
   yum:
     name: "{{ item }}"
     state: present #latest
