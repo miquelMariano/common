@@ -21,10 +21,10 @@ No dependencies
 Example Playbook
 ----------------
 
-- hosts: all
-  user: root
-  roles:
-  - role: miquelMariano.common
+		- hosts: all
+ 		  user: root
+		  roles:
+		  - role: miquelMariano.common
 
 Execute playbook
 ----------------
