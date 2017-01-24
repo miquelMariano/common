@@ -11,6 +11,7 @@
       - htop
       - iotop
       - net-tools
+      - mlocate
       - libselinux-python
       - ansible
   when: ansible_os_family == 'RedHat'
