@@ -1,6 +1,12 @@
 ---
 
-- name: Change hostname
+- name: Change /etc/hostname
+  replace:
+   dest=/etc/hostname
+   regexp='.*.'
+   replace={{ inventory_hostname }}
+
+ - name: Change hostname
   hostname:
     name: {{ inventory_hostname }}
 
