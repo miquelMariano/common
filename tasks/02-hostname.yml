@@ -6,9 +6,9 @@
    regexp='.*.'
    replace={{ inventory_hostname }}
 
- - name: Change hostname
-   hostname:
-    name: {{ inventory_hostname }}
+- name: Change hostname
+  hostname:
+   name: {{ inventory_hostname }}
 
 #- name: Build hosts file
 #  lineinfile: 
