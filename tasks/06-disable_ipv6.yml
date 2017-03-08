@@ -1,16 +1,10 @@
 ---
 
-- name: Touch disableipv6 config file 
-  file:
-    path: /etc/sysctl.d/disableipv6.conf
-    state: touch
-
 - name: Disable IPv6
-  lineinfile:
-    path: /etc/sysctl.d/disableipv6.conf
-    state: present
-#    regexp: '^%wheel\s'
-    line: 'net.ipv6.conf.all.disable_ipv6 = 1'
+  copy:
+   src=disableipv6.conf
+   dest=/etc/sysctl.d/
+
 
 #- name: Disable IPv6
 #  lineinfile:
