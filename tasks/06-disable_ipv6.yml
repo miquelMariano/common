@@ -6,7 +6,7 @@
     state: touch
 
 - name: Disable IPv6
-   lineinfile:
+  lineinfile:
     path: /etc/sysctl.d/disableipv6.conf
     state: present
 #    regexp: '^%wheel\s'
