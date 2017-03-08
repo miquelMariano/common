@@ -3,7 +3,8 @@
 - name: Ensure login banner files are in place
   template: 
     src=login_banner.j2
-    dest=/etc/issue.net
+    dest=/etc/motd
+#    dest=/etc/issue.net
 
 
 #- name: Ensure sshd settings are applied
