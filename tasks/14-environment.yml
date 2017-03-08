@@ -1,0 +1,29 @@
+---
+
+- name: Ensure APP_ENVIRONMENT file
+  file:
+      path=/etc/APP_ENVIRONMENT
+      state=touch
+      mode=0644
+
+- name: Ensure APP_ENVIRONMENT var
+  lineinfile:
+      dest=/etc/APP_ENVIRONMENT
+      line="NCORA"
+
+- name: Ensure profile files exist
+  copy:
+   src={{ item }}
+   dest=/etc/profile.d/
+  with_items:
+    - environment.sh
+    - alias.sh
+
+#- name: Ensure profile files exist
+#  template:
+#    src="{{ item }}.j2"
+#    dest="/etc/profile.d/{{ item }}"
+#  with_items:
+#    - environment.sh
+#    - aliases.sh
+
