@@ -12,6 +12,9 @@
 - include: 04-environment.yml
   tags: environment
 
+- include: 05-disable_firewall_selinux.yml
+  tags: selinux
+
 #- include: 10-disable_ipv6.yml 
 #  tags: ipv6
 
