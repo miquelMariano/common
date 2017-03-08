@@ -5,6 +5,13 @@
     path: /etc/sysctl.d/disableipv6.conf
     state: touch
 
+- name: Disable IPv6
+   lineinfile:
+    path: /etc/sysctl.d/disableipv6.conf
+    state: present
+#    regexp: '^%wheel\s'
+    line: 'net.ipv6.conf.all.disable_ipv6 = 1'
+
 #- name: Disable IPv6
 #  lineinfile:
 #    dest=/etc/default/grub
