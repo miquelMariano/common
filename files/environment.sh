@@ -3,7 +3,7 @@ APP_ENVIRONMENT=$(cat /etc/APP_ENVIRONMENT)
 
 # Los colores tienen que ir entre \[ \] para que no ocurran cosas raras!
 case "$APP_ENVIRONMENT" in
-        LIVE)
+        ANSIBLE)
         export PS1="\[\033[01;41m\][${APP_ENVIRONMENT}]\[\033[00m\] [\u@\h \w]\\$ "
         ;;
         NCORA)

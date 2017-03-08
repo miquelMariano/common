@@ -9,7 +9,7 @@
 - name: Ensure APP_ENVIRONMENT var
   lineinfile:
       dest=/etc/APP_ENVIRONMENT
-      line="NCORA"
+      line="ANSIBLE"
 
 - name: Ensure profile files exist
   copy:

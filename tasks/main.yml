@@ -9,20 +9,12 @@
 - include: 03-banner.yml
   tags: banner
 
+- include: 04-environment.yml
+  tags: environment
+
 #- include: 10-disable_ipv6.yml 
 #  tags: ipv6
 
 #- include: 11-disable_firewall_selinux.yml 
 #  tags: selinux
 
-#Obsolete
-#- include: 12-hosts.yml tags=hosts
-
-#- include: 13-banner.yml 
-#  tags: banner
-
-#- include: 14-environment.yml 
-#  tags: environment
-
-#- include: 15-ntp.yml 
-#  tags: ntp
