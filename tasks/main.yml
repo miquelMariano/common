@@ -3,6 +3,9 @@
 - include: 01-base-packages.yml
   tags: packages
 
+- include: 02-hostname.yml
+  tags: hostname
+
 #- include: 10-disable_ipv6.yml 
 #  tags: ipv6
 
