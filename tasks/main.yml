@@ -6,6 +6,9 @@
 - include: 02-hostname.yml
   tags: hostname
 
+- include: 03-banner.yml
+  tags: banner
+
 #- include: 10-disable_ipv6.yml 
 #  tags: ipv6
 
