@@ -1,0 +1,43 @@
+---
+
+- name: Ensure common sowtware are installed
+  yum:
+    name: "{{ item }}"
+    state: present #latest
+  with_items:
+      - epel-release
+      - vim
+      - git
+      - htop
+      - iotop
+      - net-tools
+      - mlocate
+      - libselinux-python
+      - ansible
+  when: ansible_os_family == 'RedHat'
+
+#- name: Intall last version of EPEL repo
+#  yum:
+#    name: epel-release
+#    state: latest
+
+#- name: Install last version of VIM
+#  yum:
+#    name: vim
+#    state: latest
+
+#- name: Install last version of HTOP
+#  yum:
+#    name: htop
+#    state: latest
+
+#- name: Install last version of libselinux-python
+#  yum:
+#    name: libselinux-python
+#    state: latest
+
+#- name: Ensure Ansible packages are installed
+#  yum: 
+#    name: ansible
+#    state: present
+
