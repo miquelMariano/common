@@ -1,0 +1,16 @@
+---
+
+- name: Disable IPv6
+  lineinfile:
+    dest=/etc/default/grub
+    regexp='^GRUB_CMDLINE_LINUX='
+    insertbefore=BOF
+    line='GRUB_CMDLINE_LINUX="crashkernel=auto ipv6.disable=1 net.ifnames=0 rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet"'
+
+- name: Disable IPv6 | Apply changes 
+  shell: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+
+#Original
+#GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=centos/root rd.lvm.lv=centos/swap rhgb quiet"
+#
