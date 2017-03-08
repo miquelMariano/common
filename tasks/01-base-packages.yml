@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure common sowtware are installed
+- name: Ensure common software are installed
   yum:
     name: "{{ item }}"
     state: present #latest
@@ -14,6 +14,7 @@
       - mlocate
       - libselinux-python
       - ansible
+      - ntp
   when: ansible_os_family == 'RedHat'
 
 #- name: Intall last version of EPEL repo
