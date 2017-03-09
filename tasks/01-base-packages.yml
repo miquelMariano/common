@@ -1,11 +1,16 @@
 ---
 
+- name: Ensure epel-release repo are installed
+  yum:
+    name: epel-release
+    state: latest
+
+
 - name: Ensure common software are installed
   yum:
     name: "{{ item }}"
     state: present #latest
   with_items:
-      - epel-release
       - vim
       - git
       - htop
