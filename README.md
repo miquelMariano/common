@@ -21,22 +21,22 @@ No dependencies
 Example Playbook
 ----------------
 
-		-- hosts: ansible
-  		   user: root
-           tasks:
-             - name: Ensure that role are up to date
-               command: ansible-galaxy install --force {{ item }}
-               with_items:
-                 - miquelMariano.common
-               when:
-                 - update_mode | default(False)
-               tags: update
-               ignore_errors: yes
+		 - hosts: ansible
+  		 user: root
+       tasks:
+         - name: Ensure that role are up to date
+           command: ansible-galaxy install --force {{ item }}
+           with_items:
+             - miquelMariano.common
+           when:
+             - update_mode | default(False)
+           tags: update
+          ignore_errors: yes
 
-             - hosts: ansible
-               user: root
-               roles:
-               - role: miquelMariano.common
+     - hosts: ansible
+       user: root
+       roles:
+          - role: miquelMariano.common
 
 Execute playbook
 ----------------
