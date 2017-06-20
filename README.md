@@ -42,8 +42,10 @@ Example Playbook
 
 Execute playbook
 ----------------
-ansible-playbook playbooks/common.yml -i inventory/servers --extra-vars "update_mode=true"
 
+```yaml
+ansible-playbook playbooks/common.yml -i inventory/servers --extra-vars "update_mode=true"
+```
 
 License
 -------
