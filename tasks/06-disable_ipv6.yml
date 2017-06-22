@@ -1,21 +1,8 @@
 ---
 
-#Module replace adds string each time. We have to change to module lineinfile
-
-#- name: Check if ipv6 are disabled
-#  command: grep -Fxq "ipv6.disable=1" /etc/default/grub
-#  register: checkmyconf
-#  ignore_errors: True
-#  changed_when: False
-
 - name: Check if ipv6 are disabled
   command: "cat /etc/default/grub"
   register: checkmyconf
-
-#- name: a task that only happens if the user exists
-#  when: checkmyconf.stdout.find('ipv6.disable=1') != -1
-#  debug: msg="user hillsy exists"
-
 
 - name: Disable IPv6
   replace:
@@ -29,6 +16,5 @@
   shell: grub2-mkconfig -o /boot/grub2/grub.cfg
   when: "'ipv6.disable=1' not in checkmyconf.stdout"
 
-
-- name: Greet the world if /tmp/my.conf contains "127.0.0.1"
+- name: Show /etc/default/grup contains
   debug: msg="{{ checkmyconf.stdout }}"
