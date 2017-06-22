@@ -9,7 +9,7 @@
 #  changed_when: False
 
 - name: Check if ipv6 are disabled
-    shell: cat /etc/default/grub
+    shell: "cat /etc/default/grub"
     register: checkmyconf
 
 - name: a task that only happens if the user exists
