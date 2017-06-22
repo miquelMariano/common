@@ -10,7 +10,7 @@
 
 - name: Check if ipv6 are disabled
   command: "cat /etc/default/grub"
-  egister: checkmyconf
+  register: checkmyconf
 
 - name: a task that only happens if the user exists
   when: checkmyconf.stdout.find('ipv6.disable=1') != -1
