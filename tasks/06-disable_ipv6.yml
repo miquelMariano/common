@@ -13,7 +13,7 @@
   egister: checkmyconf
 
 - name: a task that only happens if the user exists
-  when: checkmyconf.stdout.find('ipv6.disable=1) != -1
+  when: checkmyconf.stdout.find('ipv6.disable=1') != -1
   debug: msg="user hillsy exists"
 
 
