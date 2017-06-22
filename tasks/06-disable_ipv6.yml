@@ -31,4 +31,4 @@
 
 
 - name: Greet the world if /tmp/my.conf contains "127.0.0.1"
-  debug: msg="checkmyconf.stdout"
+  debug: msg="{{ checkmyconf.stdout }}"
