@@ -9,8 +9,8 @@
 #  changed_when: False
 
 - name: Check if ipv6 are disabled
-    shell: "cat /etc/default/grub"
-    register: checkmyconf
+  command: "cat /etc/default/grub"
+  egister: checkmyconf
 
 - name: a task that only happens if the user exists
     when: checkmyconf.stdout.find('ipv6.disable=1) != -1
