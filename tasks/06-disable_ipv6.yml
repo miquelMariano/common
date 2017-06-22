@@ -1,11 +1,11 @@
 ---
 
 - name: Disable IPv6
-  lineinfile:
+  replace:
     dest: /etc/default/grub
-    regexp: '^GRUB_CMDLINE_LINUX='
+    regexp: '^GRUB_CMDLINE_LINUX="'
     insertbefore: 'GRUB_CMDLINE_LINUX="'
-    line: 'ipv6.disable=1 '
+    line: 'GRUB_CMDLINE_LINUX="ipv6.disable=1 '
     backup: yes
 
 - name: Disable IPv6 | Apply changes 
