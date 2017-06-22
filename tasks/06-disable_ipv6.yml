@@ -4,10 +4,11 @@
   lineinfile:
     dest: /etc/default/grub
     regexp: '^GRUB_CMDLINE_LINUX='
-    insertbefore: BOF
-    line: 'GRUB_CMDLINE_LINUX="ipv6.disable=1 rd.lvm.lv=centos/root rd.lvm.lv=centos/swap crashkernel=auto rhgb quiet"'
-#    line='GRUB_CMDLINE_LINUX="ipv6.disable=1 crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap "'
+    insertbefore: 'GRUB_CMDLINE_LINUX="'
+    line: 'ipv6.disable=1 '
     backup: yes
 
 - name: Disable IPv6 | Apply changes 
   shell: grub2-mkconfig -o /boot/grub2/grub.cfg
+
+#
