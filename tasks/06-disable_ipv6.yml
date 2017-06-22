@@ -5,8 +5,8 @@
 - name: Check if ipv6 are disabled
   command: grep -Fxq "ipv6.disable=1" /etc/default/grub
   register: checkmyconf
-  ignore_errors: True
-  changed_when: False
+#  ignore_errors: True
+#  changed_when: False
 
 - name: Disable IPv6
   replace:
