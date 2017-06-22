@@ -2,11 +2,20 @@
 
 #Module replace adds string each time. We have to change to module lineinfile
 
-- name: Check if ipv6 are disabled
-  command: grep -Fxq "ipv6.disable=1" /etc/default/grub
-  register: checkmyconf
+#- name: Check if ipv6 are disabled
+#  command: grep -Fxq "ipv6.disable=1" /etc/default/grub
+#  register: checkmyconf
 #  ignore_errors: True
 #  changed_when: False
+
+- name: Check if ipv6 are disabled
+    shell: cat /etc/default/grub
+    register: checkmyconf
+
+- name: a task that only happens if the user exists
+    when: checkmyconf.stdout.find('ipv6.disable=1) != -1
+    debug: msg="user hillsy exists"
+
 
 - name: Disable IPv6
   replace:
