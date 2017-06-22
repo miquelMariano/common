@@ -3,8 +3,6 @@
                 -ANSIBLE MANAGED HOST-
                 ----------------------
 
-                {{ inventory_hostname }}
-
            NCORA INFORMATION TECHNOLOGY S.L.
 
   -----------------------------------------------------------
@@ -17,4 +15,10 @@ o computacion esta estrictamente restringido a aquellos
 oficialmente autorizados por NCORA INFORMATION TECHNOLOGY S.L.
   -----------------------------------------------------------
 
-                 
+Hostname:	{{ ansible_hostname }}
+Domain:		{{ ansible_domain }}
+
+vCPU:		{{ ansible_processor_vcpus }}
+Memory:		{{ ansible_memtotal_mb }}
+
+SO: 		{{ ansible_distribution }} {{ ansible_distribution_major_version }}
