@@ -19,3 +19,8 @@
   tags: ipv6
 
 
+
+- include: 99-telegram-nogification.yml
+  tags: notification
+
+
