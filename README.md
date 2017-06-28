@@ -55,4 +55,4 @@ BSD
 Author Information
 ------------------
 
-[@miquelMariano](https://twitter.com/miquelMariano)
+[miquelMariano.github.io](https://miquelMariano.github.io) | [Twitter](https://twitter.com/miquelMariano)
