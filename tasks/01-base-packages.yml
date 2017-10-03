@@ -28,6 +28,7 @@
 - name: Install "gtop" node.js package.
   npm:
     name: gtop 
+    global: yes
 
 #- name: Intall last version of EPEL repo
 #  yum:
