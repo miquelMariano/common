@@ -22,7 +22,12 @@
       - ntp
       - python-pip
       - wget
+      - npm
   when: ansible_os_family == 'RedHat'
+
+- name: Install "gtop" node.js package.
+  npm:
+    name: gtop 
 
 #- name: Intall last version of EPEL repo
 #  yum:
