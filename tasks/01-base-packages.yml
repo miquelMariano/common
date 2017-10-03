@@ -22,7 +22,7 @@
       - ntp
       - python-pip
       - wget
-      - npm
+      - npm #Required for install gtop
   when: ansible_os_family == 'RedHat'
 
 - name: Install "gtop" node.js package.
