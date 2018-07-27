@@ -34,7 +34,7 @@ Example Playbook
        tags: update
        ignore_errors: yes
 
-- hosts: ansible
+- hosts: "{{  servers }}"
   user: root
   roles:
      - role: miquelMariano.common
@@ -44,7 +44,7 @@ Execute playbook
 ----------------
 
 ```yaml
-ansible-playbook playbooks/common.yml -i inventory/servers --extra-vars "update_mode=true"
+ansible-playbook playbooks/common.yml -i inventory/servers -e "update_mode=true servers=server"
 ```
 
 License
