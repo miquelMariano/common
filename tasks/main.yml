@@ -1,24 +1,24 @@
 ---
 
-- include: 01-base-packages.yml
+- include_tasks: 01-base-packages.yml
   tags: packages
 
-- include: 02-hostname.yml
+- include_tasks: 02-hostname.yml
   tags: hostname
 
-- include: 03-banner.yml
+- include_tasks: 03-banner.yml
   tags: banner
 
-- include: 04-environment.yml
+- include_tasks: 04-environment.yml
   tags: environment
 
-- include: 05-disable_firewall_selinux.yml
+- include_tasks: 05-disable_firewall_selinux.yml
   tags: selinux
 
-- include: 06-disable_ipv6.yml 
+- include_tasks: 06-disable_ipv6.yml 
   tags: ipv6
 
-- include: 99-telegram-notification.yml
+- include_tasks: 99-telegram-notification.yml
   tags: notification
 
 
