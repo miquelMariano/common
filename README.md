@@ -22,13 +22,16 @@ Example Playbook
 ----------------
 
 ```yaml
+---
+### common.yml
+
 - hosts: ansible
   user: root
   tasks:
      - name: Ensure that role are up to date
        command: ansible-galaxy install --force {{ item }}
        with_items:
-          - miquelMariano.common
+          - miquelmariano.common
        when:
           - update_mode | default(False)
        tags: update
@@ -37,7 +40,7 @@ Example Playbook
 - hosts: "{{  servers }}"
   user: root
   roles:
-     - role: miquelMariano.common
+     - role: miquelmariano.common
 ```
 
 Execute playbook
