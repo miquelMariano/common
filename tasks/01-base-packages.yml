@@ -24,6 +24,7 @@
       - wget
       - npm #Required for install gtop
       - system-storage-manager
+      - ntp
   when: ansible_os_family == 'RedHat'
 
 - name: Install "gtop" node.js package.
