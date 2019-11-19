@@ -8,9 +8,10 @@
 
 - name: Ensure common software are installed
   yum:
-    name: "{{ item }}"
+    name: "{{ packages }}"
     state: present #latest
-  with_items:
+  vars:
+    packages:
       - vim
       - git
       - htop
