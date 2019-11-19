@@ -33,6 +33,7 @@
   npm:
     name: gtop 
     global: yes
+  ignore_errors: yes  
 
 #- name: Intall last version of EPEL repo
 #  yum:
